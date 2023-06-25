@@ -1293,5 +1293,6 @@
   'paypal\\braintree\\controller\\webhook\\fraudprotection' => 'PayPal\\Braintree\\Controller\\Webhook\\FraudProtection',
   'simplifiedmagento\\firstmodule\\controller\\index\\booking' => 'SimplifiedMagento\\FirstModule\\Controller\\Index\\Booking',
   'simplifiedmagento\\firstmodule\\controller\\index\\bookinglist' => 'SimplifiedMagento\\FirstModule\\Controller\\Index\\BookingList',
+  'simplifiedmagento\\firstmodule\\controller\\index\\product' => 'SimplifiedMagento\\FirstModule\\Controller\\Index\\Product',
   'simplifiedmagento\\firstmodule\\controller\\page\\helloworld' => 'SimplifiedMagento\\FirstModule\\Controller\\Page\\HelloWorld',
 );

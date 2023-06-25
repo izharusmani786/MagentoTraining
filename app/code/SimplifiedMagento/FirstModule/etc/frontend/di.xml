@@ -7,4 +7,15 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="SimplifiedMagento\FirstModule\NotMagento\PencilInterface" type="SimplifiedMagento\FirstModule\NotMagento\RedPencil" />
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="before_set_name"
+            type="SimplifiedMagento\FirstModule\Plugin\ProductSolutions"
+            sortOrder="10" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\View">
+        <plugin name="custom-text" type="SimplifiedMagento\FirstModule\Plugin\Catalog\Block\Product\View"/>
+    </type>
+    <type name="Magento\Quote\Model\Quote\Address\Total">
+        <plugin name="custom_adminfee" type="SimplifiedMagento\FirstModule\Plugin\ProductSolutions" sortOrder="1"/>
+    </type>
 </config>

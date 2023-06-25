@@ -475,6 +475,11 @@
         'sortOrder' => 100,
         'instance' => 'Magento\\Bundle\\Model\\Plugin\\Frontend\\ProductIdentitiesExtender',
       ),
+      'before_set_name' => 
+      array (
+        'sortOrder' => 10,
+        'instance' => 'SimplifiedMagento\\FirstModule\\Plugin\\ProductSolutions',
+      ),
     ),
     'Magento\\Cms\\Model\\PageRepository\\ValidationComposite' => 
     array (
@@ -780,6 +785,11 @@
       array (
         'sortOrder' => 0,
         'instance' => 'Magento\\SendFriend\\Block\\Plugin\\Catalog\\Product\\View',
+      ),
+      'custom-text' => 
+      array (
+        'sortOrder' => 0,
+        'instance' => 'SimplifiedMagento\\FirstModule\\Plugin\\Catalog\\Block\\Product\\View',
       ),
     ),
     'Magento\\Catalog\\Model\\Product\\Action' => 
@@ -3406,6 +3416,14 @@
         'instance' => 'Magento\\Wishlist\\Plugin\\Helper\\Product\\View',
       ),
     ),
+    'Magento\\Quote\\Model\\Quote\\Address\\Total' => 
+    array (
+      'custom_adminfee' => 
+      array (
+        'sortOrder' => 1,
+        'instance' => 'SimplifiedMagento\\FirstModule\\Plugin\\ProductSolutions',
+      ),
+    ),
     'Magento\\Catalog\\Block\\Product\\ListProduct' => 
     array (
       'braintreeProductDetailsBlockPlugin' => 
@@ -4296,6 +4314,11 @@
         'sortOrder' => 0,
         'instance' => 'Magento\\Swatches\\Model\\Plugin\\Product',
       ),
+      'before_set_name' => 
+      array (
+        'sortOrder' => 10,
+        'instance' => 'SimplifiedMagento\\FirstModule\\Plugin\\ProductSolutions',
+      ),
       'cms' => 
       array (
         'sortOrder' => 100,
@@ -4706,6 +4729,11 @@
       array (
         'sortOrder' => 0,
         'instance' => 'Magento\\SendFriend\\Block\\Plugin\\Catalog\\Product\\View',
+      ),
+      'custom-text' => 
+      array (
+        'sortOrder' => 0,
+        'instance' => 'SimplifiedMagento\\FirstModule\\Plugin\\Catalog\\Block\\Product\\View',
       ),
     ),
     'Magento\\Catalog\\Model\\Product\\Action' => 
@@ -9216,6 +9244,14 @@
         'instance' => 'Magento\\Wishlist\\Plugin\\Helper\\Product\\View',
       ),
     ),
+    'Magento\\Quote\\Model\\Quote\\Address\\Total' => 
+    array (
+      'custom_adminfee' => 
+      array (
+        'sortOrder' => 1,
+        'instance' => 'SimplifiedMagento\\FirstModule\\Plugin\\ProductSolutions',
+      ),
+    ),
     'Magento\\Catalog\\Block\\Product\\ListProduct' => 
     array (
       'add_product_object_to_image_data_array' => 
@@ -9886,6 +9922,13 @@
         0 => 'exclude_swatch_attribute',
       ),
     ),
+    'Magento\\Catalog\\Model\\Product_getName___self' => 
+    array (
+      4 => 
+      array (
+        0 => 'before_set_name',
+      ),
+    ),
     'Magento\\Cms\\Model\\PageRepository\\ValidationComposite_save___self' => 
     array (
       1 => 
@@ -10214,6 +10257,13 @@
       4 => 
       array (
         0 => 'catalogProductViewCanEmailToFriend',
+      ),
+    ),
+    'Magento\\Catalog\\Block\\Product\\View_toHtml___self' => 
+    array (
+      4 => 
+      array (
+        0 => 'custom-text',
       ),
     ),
     'Magento\\Catalog\\Model\\Product\\Action_updateAttributes___self' => 
@@ -13349,6 +13399,13 @@
       1 => 
       array (
         0 => 'pre_render_product_options_from_wishlist',
+      ),
+    ),
+    'Magento\\Quote\\Model\\Quote\\Address\\Total_getName___self' => 
+    array (
+      4 => 
+      array (
+        0 => 'custom_adminfee',
       ),
     ),
     'Magento\\Catalog\\Block\\Product\\ListProduct_getImage___self' => 
