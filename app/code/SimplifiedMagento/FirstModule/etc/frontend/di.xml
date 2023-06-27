@@ -18,4 +18,9 @@
     <type name="Magento\Quote\Model\Quote\Address\Total">
         <plugin name="custom_adminfee" type="SimplifiedMagento\FirstModule\Plugin\ProductSolutions" sortOrder="1"/>
     </type>
+    <type name="SimplifiedMagento\FirstModule\Controller\Page\HelloWorld">
+        <arguments>
+            <argument name="heavyService" xsi:type="object">SimplifiedMagento\FirstModule\Model\HeavyService\Proxy</argument>
+        </arguments>
+    </type>
 </config>

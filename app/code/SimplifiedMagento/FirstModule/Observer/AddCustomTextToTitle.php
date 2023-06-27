@@ -12,6 +12,7 @@ class AddCustomTextToTitle implements ObserverInterface
         $product = $observer->getEvent()->getProduct();
         $productName=$product->getName();  
         if(strpos($productName, "KFC") !== false){
+            $productName = implode(' ', array_unique(explode(' ', $productName)));
             $product->setName($productName);
         } else {
             $additionalText = "KFC";
