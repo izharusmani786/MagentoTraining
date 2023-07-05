@@ -9,7 +9,7 @@ class View
     public function afterToHtml(ProductView $subject, $html)
     {
         if (in_array($subject->getNameInLayout(), $this->displayBlocks)) {
-            return $html . '<div><input type="checkbox" id="giftwrap" name="giftwrap" value="wrap"> <label for="giftwrap">Gift wrap this item for ₹15</label></div>';
+            return $html . '<div><input type="checkbox" id="like" name="like"> <label for="likedislike-wrap">Like</label></div><div><input type="checkbox" id="dislike" name="dislike"> <label for="dislike">Dislike</label></div>';
         }
  
         return $html;

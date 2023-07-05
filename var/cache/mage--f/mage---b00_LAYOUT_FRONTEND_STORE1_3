@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1687791875;s:6:"expire";i:1719327875;s:4:"tags";s:37:"b00_LAYOUT_GENERAL_CACHE_TAG,b00_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1688566564;s:6:"expire";i:1720102564;s:4:"tags";s:37:"b00_LAYOUT_GENERAL_CACHE_TAG,b00_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -6920,6 +6920,10 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1687791875;s:6:"expire";i:1719327875;s:4:"t
       <block class="Magento\Wishlist\Block\Share\Wishlist" name="customer.wishlist" template="Magento_Wishlist::shared.phtml" cacheable="false"/>
    </referenceContainer>
 </body>
+</handle><handle id="catalog_product_view" layout="2columns-left"><head>
+   <script src="SimplifiedMagento_Database::js/customlikedislike.js"/>
+   <css src="SimplifiedMagento_Database::css/custom-likedislike.css" rel="stylesheet" type="text/css"/>
+</head>
 </handle><handle id="bookinglist_index_bookinglist" layout="2columns-left"><head>
    <title>Booking List</title>
 </head>

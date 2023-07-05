@@ -17,15 +17,6 @@ class Interceptor extends \Magento\Catalog\Model\Product implements \Magento\Fra
     /**
      * {@inheritdoc}
      */
-    public function getName()
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getName');
-        return $pluginInfo ? $this->___callPlugins('getName', func_get_args(), $pluginInfo) : parent::getName();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function reindex()
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'reindex');
