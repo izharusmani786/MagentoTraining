@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1686137481;s:6:"expire";i:1717673481;s:4:"tags";s:37:"b00_LAYOUT_GENERAL_CACHE_TAG,b00_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1688566564;s:6:"expire";i:1720102564;s:4:"tags";s:37:"b00_LAYOUT_GENERAL_CACHE_TAG,b00_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -6920,6 +6920,86 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1686137481;s:6:"expire";i:1717673481;s:4:"t
       <block class="Magento\Wishlist\Block\Share\Wishlist" name="customer.wishlist" template="Magento_Wishlist::shared.phtml" cacheable="false"/>
    </referenceContainer>
 </body>
+</handle><handle id="catalog_product_view" layout="2columns-left"><head>
+   <script src="SimplifiedMagento_Database::js/customlikedislike.js"/>
+   <css src="SimplifiedMagento_Database::css/custom-likedislike.css" rel="stylesheet" type="text/css"/>
+</head>
+</handle><handle id="bookinglist_index_bookinglist" layout="2columns-left"><head>
+   <title>Booking List</title>
+</head>
+<body>
+   <referenceBlock name="navigation.sections" remove="true"/>
+   <referenceContainer name="content">
+      <block class="SimplifiedMagento\FirstModule\Block\BookingList" name="bookinglist" template="SimplifiedMagento_FirstModule::bookinglist.phtml"/>
+   </referenceContainer>
+</body>
+</handle><handle id="checkout_cart_index"><body>
+   <referenceBlock name="checkout.cart.totals">
+      <arguments>
+         <argument name="jsLayout" xsi:type="array">
+            <item name="components" xsi:type="array">
+               <item name="block-totals" xsi:type="array">
+                  <item name="children" xsi:type="array">
+                     <item name="fee" xsi:type="array">
+                        <item name="component" xsi:type="string">SimplifiedMagento_FirstModule/js/view/checkout/cart/totals/fee</item>
+                        <item name="sortOrder" xsi:type="string">20</item>
+                        <item name="config" xsi:type="array">
+                           <item name="template" xsi:type="string">SimplifiedMagento_FirstModule/checkout/cart/totals/fee</item>
+                           <item name="title" translate="true" xsi:type="string">1% Admin Fee</item>
+                        </item>
+                     </item>
+                  </item>
+               </item>
+            </item>
+         </argument>
+      </arguments>
+   </referenceBlock>
+</body>
+</handle><handle id="checkout_index_index" layout="1column"><body>
+   <referenceBlock name="checkout.root">
+      <arguments>
+         <argument name="jsLayout" xsi:type="array">
+            <item name="components" xsi:type="array">
+               <item name="checkout" xsi:type="array">
+                  <item name="children" xsi:type="array">
+                     <item name="sidebar" xsi:type="array">
+                        <item name="children" xsi:type="array">
+                           <item name="summary" xsi:type="array">
+                              <item name="children" xsi:type="array">
+                                 <item name="totals" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                       <item name="fee" xsi:type="array">
+                                          <item name="component" xsi:type="string">SimplifiedMagento_FirstModule/js/view/checkout/cart/totals/fee</item>
+                                          <item name="sortOrder" xsi:type="string">20</item>
+                                          <item name="config" xsi:type="array">
+                                             <item name="template" xsi:type="string">SimplifiedMagento_FirstModule/checkout/cart/totals/fee</item>
+                                             <item name="title" translate="true" xsi:type="string">1% Admin Fee</item>
+                                          </item>
+                                       </item>
+                                    </item>
+                                 </item>
+                                 <item name="cart_items" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                       <item name="details" xsi:type="array">
+                                          <item name="children" xsi:type="array">
+                                             <item name="subtotal" xsi:type="array">
+                                                <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/summary/item/details/subtotal</item>
+                                             </item>
+                                          </item>
+                                       </item>
+                                    </item>
+                                 </item>
+                              </item>
+                           </item>
+                        </item>
+                     </item>
+                  </item>
+               </item>
+            </item>
+         </argument>
+      </arguments>
+   </referenceBlock>
+</body>
 </handle><handle id="companymodule_index_booking" layout="2columns-left"><head>
    <title>Booking</title>
 </head>
@@ -6927,6 +7007,11 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1686137481;s:6:"expire";i:1717673481;s:4:"t
    <referenceBlock name="navigation.sections" remove="true"/>
    <referenceContainer name="content">
       <block class="SimplifiedMagento\FirstModule\Block\Booking" name="companymodule.booking" template="SimplifiedMagento_FirstModule::booking.phtml"/>
+   </referenceContainer>
+</body>
+</handle><handle id="sales_order_view"><body>
+   <referenceContainer name="order_totals">
+      <block class="SimplifiedMagento\FirstModule\Block\Sales\Order\Fee" name="fee"/>
    </referenceContainer>
 </body>
 </handle><handle id="braintree_googlepay_review" layout="1column"><head>

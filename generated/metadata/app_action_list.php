@@ -1291,6 +1291,10 @@
   'paypal\\braintree\\controller\\paypal\\review' => 'PayPal\\Braintree\\Controller\\Paypal\\Review',
   'paypal\\braintree\\controller\\paypal\\saveshippingmethod' => 'PayPal\\Braintree\\Controller\\Paypal\\SaveShippingMethod',
   'paypal\\braintree\\controller\\webhook\\fraudprotection' => 'PayPal\\Braintree\\Controller\\Webhook\\FraudProtection',
+  'simplifiedmagento\\database\\controller\\page\\index' => 'SimplifiedMagento\\Database\\Controller\\Page\\Index',
   'simplifiedmagento\\firstmodule\\controller\\index\\booking' => 'SimplifiedMagento\\FirstModule\\Controller\\Index\\Booking',
+  'simplifiedmagento\\firstmodule\\controller\\index\\bookinglist' => 'SimplifiedMagento\\FirstModule\\Controller\\Index\\BookingList',
+  'simplifiedmagento\\firstmodule\\controller\\index\\product' => 'SimplifiedMagento\\FirstModule\\Controller\\Index\\Product',
   'simplifiedmagento\\firstmodule\\controller\\page\\helloworld' => 'SimplifiedMagento\\FirstModule\\Controller\\Page\\HelloWorld',
+  'simplifiedmagento\\firstmodule\\controller\\page\\router' => 'SimplifiedMagento\\FirstModule\\Controller\\Page\\Router',
 );

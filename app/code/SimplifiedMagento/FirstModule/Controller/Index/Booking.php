@@ -23,18 +23,29 @@ class Booking extends \Magento\Framework\App\Action\Action {
 
 	public function execute(){
         try {
+            
             $model = $this->_dataExample->create();
             $data = (array)$this->getRequest()->getPost();
+            $collection = $model->getCollection();
+            if(!empty($data)){
+               $collection->addFieldToFilter("email", ["eq" => $data['email']]);
+               $exitData = count($collection->getData());
+            }
+            
             if($data){
-                $model->addData([
-                    "firstname" => $data['firstname'],
-                    "lastname" => $data['lastname'],
-                    "email" => $data['email'],
-                    "dob" => $data['dob'],
-                    ]);
-                $saveData = $model->save();
-                if($saveData){
-                    $this->messageManager->addSuccess( __('Insert Record Successfully !') );
+                if($exitData > 0){
+                    $this->messageManager->addError( __('Email is already in use. Try another email id') );
+                } else {
+                    $model->addData([
+                        "firstname" => $data['firstname'],
+                        "lastname" => $data['lastname'],
+                        "email" => $data['email'],
+                        "dob" => $data['dob'],
+                        ]);
+                    $saveData = $model->save();
+                    if($saveData){
+                        $this->messageManager->addSuccess( __('Insert Record Successfully !') );
+                    }
                 }
             }
         } catch (\Exception $e) {

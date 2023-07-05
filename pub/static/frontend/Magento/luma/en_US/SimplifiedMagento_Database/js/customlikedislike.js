@@ -1,0 +1,1 @@
+/var/www/html/bhpc/app/code/SimplifiedMagento/Database/view/frontend/web/js/customlikedislike.js

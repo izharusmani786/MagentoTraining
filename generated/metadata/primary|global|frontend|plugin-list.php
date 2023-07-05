@@ -781,6 +781,11 @@
         'sortOrder' => 0,
         'instance' => 'Magento\\SendFriend\\Block\\Plugin\\Catalog\\Product\\View',
       ),
+      'custom-text' => 
+      array (
+        'sortOrder' => 0,
+        'instance' => 'SimplifiedMagento\\Database\\Plugin\\Catalog\\Block\\Product\\View',
+      ),
     ),
     'Magento\\Catalog\\Model\\Product\\Action' => 
     array (
@@ -4706,6 +4711,11 @@
       array (
         'sortOrder' => 0,
         'instance' => 'Magento\\SendFriend\\Block\\Plugin\\Catalog\\Product\\View',
+      ),
+      'custom-text' => 
+      array (
+        'sortOrder' => 0,
+        'instance' => 'SimplifiedMagento\\Database\\Plugin\\Catalog\\Block\\Product\\View',
       ),
     ),
     'Magento\\Catalog\\Model\\Product\\Action' => 
@@ -10214,6 +10224,13 @@
       4 => 
       array (
         0 => 'catalogProductViewCanEmailToFriend',
+      ),
+    ),
+    'Magento\\Catalog\\Block\\Product\\View_toHtml___self' => 
+    array (
+      4 => 
+      array (
+        0 => 'custom-text',
       ),
     ),
     'Magento\\Catalog\\Model\\Product\\Action_updateAttributes___self' => 

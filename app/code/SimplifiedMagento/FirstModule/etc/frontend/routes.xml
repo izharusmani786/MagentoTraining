@@ -13,5 +13,11 @@
         <route id="companymodule" frontName="companymodule">
             <module name="SimplifiedMagento_FirstModule" />
         </route>
+        <route id="bookinglist" frontName="bookinglist">
+            <module name="SimplifiedMagento_FirstModule" />
+        </route>
+        <route id="productname" frontName="productname">
+            <module name="SimplifiedMagento_FirstModule" />
+        </route>
     </router>
 </config>
