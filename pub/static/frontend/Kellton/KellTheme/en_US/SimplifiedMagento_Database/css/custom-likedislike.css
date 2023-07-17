@@ -1,0 +1,46 @@
+.like_dislike_wrapper {
+    display: flex;
+    margin: 0px 0 30px 0;
+    justify-content: start;
+    align-items: center;
+}
+.like {
+    margin-right: 25px;
+}
+.btn_action a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: gray;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 16px;
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn_action  a.active {
+    background: #006bb4;
+}
+.popup_like_dislike {
+    margin-bottom: 30px;
+    display: none;
+}
+.popup_like_dislike .msg {
+    background: red;
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+.box-tocart {
+    margin-bottom: 0 !important;
+}
+button#product-addtocart-button {
+    margin-bottom: 0;
+}
+.three_images {
+    display: flex;
+}
+.three_images img {
+    width: 100px;
+}

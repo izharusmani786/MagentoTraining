@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- get customer Api -->
+    <route url="/V1/get/bookings/" method="GET">
+        <service class="SimplifiedMagento\FirstModule\Api\GetBookingInterface" method="getData" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--<preference for="SimplifiedMagento\FirstModule\NotMagento\PencilInterface" type="SimplifiedMagento\FirstModule\NotMagento\RedPencil" />
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="before_set_name"
+            type="SimplifiedMagento\FirstModule\Plugin\ProductSolutions"
+            sortOrder="10" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\View">
+        <plugin name="custom-text" type="SimplifiedMagento\FirstModule\Plugin\Catalog\Block\Product\View"/>
+    </type>
+    <type name="Magento\Quote\Model\Quote\Address\Total">
+        <plugin name="custom_adminfee" type="SimplifiedMagento\FirstModule\Plugin\ProductSolutions" sortOrder="1"/>
+    </type>
+    <type name="SimplifiedMagento\FirstModule\Controller\Page\HelloWorld">
+        <arguments>
+            <argument name="heavyService" xsi:type="object">SimplifiedMagento\FirstModule\Model\HeavyService\Proxy</argument>
+        </arguments>
+    </type>-->
+
+    <type name="Magento\Framework\App\RouterList">
+        <arguments>
+            <argument name="routerList" xsi:type="array">
+                <item name="customRoute" xsi:type="array">
+                    <item name="class" xsi:type="string">SimplifiedMagento\FirstModule\Controller\Page\Router</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">61</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

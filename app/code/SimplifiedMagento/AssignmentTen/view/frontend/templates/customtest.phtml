@@ -1,0 +1,22 @@
+<p>Booking Data List by calling collection from another module.</p>
+
+<p><b>Random Number:</b> <?php echo $block->randomNumber() ?></p>
+
+<?php $data = $block->getCollectionData(); ?>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>email</th>
+    <th>created At</th>
+  </tr>
+  <?php foreach($data as $d){ ?>
+  <tr>
+    <td><?php echo $d['firstname'] ?></td>
+    <td><?php echo $d['lastname'] ?></td>
+    <td><?php echo $d['email'] ?></td>
+    <td><?php echo $d['created_at'] ?></td>
+  </tr>
+  <?php } ?>
+</table>

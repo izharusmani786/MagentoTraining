@@ -1,0 +1,44 @@
+<?php
+$collection = $block->getCollection();
+if (count($collection) > 0) { ?>
+<div class="table-wrapper orders-history">
+    <table class="data table table-order-items history" id="my-orders-table">
+        <caption class="table-caption"><?php echo __('Grid Record') ?></caption>
+        <thead>
+        <tr>
+            <th scope="col" class="col id"><?php echo __('ID') ?></th>
+            <th scope="col" class="col name"><?php echo __('First Name') ?></th>
+            <th scope="col" class="col email"><?php echo __('Last Name') ?></th>
+            <th scope="col" class="col telephone"><?php echo __('Email') ?></th>
+            <th scope="col" class="col telephone"><?php echo __('DOB') ?></th>
+            <th scope="col" class="col createat"><?php echo __('Created At') ?></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($collection as $item): ?>
+        <tr>
+            <td data-th="<?= $block->escapeHtml(__('ID')) ?>" class="col id">
+                <?php echo $item->getId() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('First Name')) ?>" class="col name">
+                <?php echo $item->getFirstname() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Last Name')) ?>" class="col name">
+                <?php echo $item->getLastname() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Email')) ?>" class="col email">
+                <?php echo $item->getEmail() ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('DOB')) ?>" class="col telephone">
+            <?php echo date('d M, Y', strtotime($item->getDob())); ?>
+            </td>
+            <td data-th="<?= $block->escapeHtml(__('Created At')) ?>"
+                class="col title"><?php echo date('d M, Y', strtotime($item->getCreatedAt())); ?></td>
+        </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+ }
+ ?>
